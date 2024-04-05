@@ -13,18 +13,6 @@ ul {
 
 li { margin-bottom: 10px; }
 
-.bg {
-  background-color: black;
-  background-image: url('../img/ground.jpg');
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .header { text-align: center; }
 
 .section-title {
