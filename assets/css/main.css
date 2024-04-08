@@ -45,7 +45,15 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-    #frame { width: 100%; }
-    #frame h1 { font-size: 50px; }
-    #frame img { height: 100px; }
+    #frame {
+        width: 90%;
+        padding: 10px;
+    }
+    #frame h1 { font-size: 40px; }
+    #frame img { height: 80px; }
+    .row p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    a { font-size: 14px; }
 }
