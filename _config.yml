@@ -13,7 +13,9 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   math_engine: katex
 
+# theme: jekyll-theme-minimal
+
 collections:
   chapters:
     output: true
-    permalink: /chapters/:name/
+    permalink: /:collection/:name
