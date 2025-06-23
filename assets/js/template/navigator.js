@@ -60,8 +60,11 @@ $(document).ready(function() {
 
     var mainNavContainer = $('.split-tocs');
 
-    function updateHighlighting($currentLink) {
+    function updateHighlighting($element) {
+        var $currentLink = $element.is('a') ? $element : $element.find('a');
+
         if (!$currentLink || $currentLink.length === 0) return;
+
         mainNavContainer.find('tr').removeClass('current');
         mainNavContainer.find('.chapter-title-span').removeClass('current');
 

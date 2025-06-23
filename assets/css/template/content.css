@@ -1,0 +1,89 @@
+/* 
+ * Adapted from Hux Blog CSS
+ * for Markdown content styling
+ */
+
+.content-wrapper {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #333333;
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    font-size: 18px;
+  }
+}
+
+.content-wrapper p,
+.content-wrapper ul,
+.content-wrapper ol {
+    margin: 30px 0;
+}
+
+.content-wrapper a {
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid #333333;
+  transition: all 0.2s ease-in-out;
+}
+
+.content-wrapper a:hover,
+.content-wrapper a:focus {
+  color: #0085a1;
+  text-decoration: none;
+  border-bottom: 1px solid #0085a1;
+}
+
+.content-wrapper h1,
+.content-wrapper h2,
+.content-wrapper h3,
+.content-wrapper h4,
+.content-wrapper h5,
+.content-wrapper h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  margin: 30px 0 20px;
+}
+
+.content-wrapper h1 {
+  font-size: 36px;
+}
+.content-wrapper h2 {
+  font-size: 30px;
+}
+.content-wrapper h3 {
+  font-size: 24px;
+}
+.content-wrapper h4 {
+  font-size: 20px;
+}
+
+.content-wrapper blockquote {
+  color: #777777;
+  font-style: italic;
+  font-size: 22px;
+  width: 90%;
+  margin: 30px auto;
+  padding: 0 20px;
+  border-left: 4px solid #0085a1;
+}
+
+.content-wrapper ul,
+.content-wrapper ol {
+    padding-left: 30px;
+}
+
+.content-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+strong, b {
+    font-weight: bold;
+    color: #000;
+} 
