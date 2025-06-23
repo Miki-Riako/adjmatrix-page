@@ -30,7 +30,7 @@
     /* How wide should the ToC be on non-mobile? */
     --verso-toc-width: 18rem;
 
-    /** Variables that control the “burger menu” appearance **/
+    /** Variables that control the "burger menu" appearance **/
     --verso-burger-height: 1.25rem;
     --verso-burger-width: 1.25rem;
     --verso-burger-line-width: 0.2rem;
@@ -871,3 +871,38 @@ main section li ol {
 .information pre, .information code {
     border-color: #0000c0;
 }
+
+.information pre, .information code {
+    background-color: #92e7a04d;
+}
+
+/* Styles for auto-generated page TOC */
+#toc .split-toc ul.page-toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0 0;
+  font-family: var(--verso-structure-font-family);
+}
+
+#toc .split-toc ul.page-toc-list li {
+    padding: 0;
+}
+
+#toc .split-toc ul.page-toc-list li a {
+  display: block;
+  padding: 4px 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  color: var(--verso-toc-text-color);
+}
+
+#toc .split-toc ul.page-toc-list li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Indentation based on header level */
+#toc .split-toc ul.page-toc-list .h2_nav a { padding-left: 1rem; }
+#toc .split-toc ul.page-toc-list .h3_nav a { padding-left: 2rem; }
+#toc .split-toc ul.page-toc-list .h4_nav a { padding-left: 3rem; }
+#toc .split-toc ul.page-toc-list .h5_nav a { padding-left: 4rem; }
+#toc .split-toc ul.page-toc-list .h6_nav a { padding-left: 5rem; }

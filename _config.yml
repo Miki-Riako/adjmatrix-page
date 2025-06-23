@@ -17,13 +17,3 @@ collections:
   chapters:
     output: true
     permalink: /chapters/:name/
-
-plugins:
-  - jekyll-feed
-  - jekyll-toc
-
-toc:
-  min_level: 2
-  max_level: 3
-  list_class: "page-toc-list"
-  sublist_class: "page-toc-sublist"

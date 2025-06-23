@@ -31,207 +31,58 @@
   <!-- 纯CSS实现的汉堡菜单和侧边栏 -->
   <label for="toggle-toc" id="toggle-toc-click"><span class="line line1"></span><span class="line line2"></span><span class="line line3"></span></label>
   <div class="with-toc">
-  <div class="toc-backdrop" onclick="document.getElementById(&#39;toggle-toc-click&#39;)?.click()"></div>
-  <nav id="toc">
-    <input type="checkbox" id="toggle-toc">
-    <div class="first">
-      <a href="{{ '/' | relative_url }}" class="toc-title">
-        <h1>{{ site.title | default: "Adjmatrix Project" }}</h1>
-      </a>
-      <div class="split-tocs">
-        <!-- ============================================= -->
-        <!-- 第一部分：站点级目录 (所有章节) - 我们之前已经做好了 -->
-        <!-- ============================================= -->
-        <div class="split-toc book">
-          <div class="title">
-            <span class="">Table of Contents</span>
-          </div>
-          <table>
-            <tbody>
-              {% assign sorted_chapters = site.chapters | sort: 'order' %}
-              {% for chapter in sorted_chapters %}
-                <tr class="numbered {% if page.url == chapter.url %}current{% endif %}">
-                  <td class="num">{{ chapter.order }}.</td>
-                  <td><a href="{{ chapter.url | relative_url }}">{{ chapter.title }}</a></td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-
-        <!-- ============================================= -->
-        <!-- 第二部分：页面级目录 (当前页标题) - 这是新的改造 -->
-        <!-- ============================================= -->
-        <div class="split-toc">
-          <div class="title">
-            <!-- 显示当前章节的标题 -->
-            <span class="number">{{ page.order }}.</span> 
-            <span class="current"><a href="{{ page.url | relative_url }}">{{ page.title }}</a></span>
-          </div>
-          <!-- 
-            这是召唤jekyll-toc插件的地方！
-            它会在这里自动生成当前页面的目录。
-            我们用一个HTML的<table>来包裹它，以匹配原始样式。
-          -->
-          <table>
-            <tbody>
-              <tr>
-                <td>
-                  {{ content | toc_only }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- ============================================= -->
-
-      </div>
-    </div>
-    <!-- ... 可以在这里添加底部链接 ... -->
-  </nav>
-    <!-- <nav id="toc">
+    <nav id="toc">
       <input type="checkbox" id="toggle-toc">
       <div class="first">
-        <a href="https://leanprover.github.io/theorem_proving_in_lean4/" class="toc-title">
-          <h1>Theorem Proving in Lean 4</h1>
-        </a>
         <div class="split-tocs">
           <div class="split-toc book">
-            <div class="title">
-              <label for="--verso-manual-toc-----bookRoot" class="toggle-split-toc"><input type="checkbox"
-                  class="toggle-split-toc" id="--verso-manual-toc-----bookRoot" checked="checked"></label><span
-                class="">Table of Contents</span>
-            </div>
-            <table>
-              <tbody>
-                <tr class="current numbered">
-                  <td class="num">1.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Introduction/#Intro">Introduction</a>
-                  </td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">2.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Dependent-Type-Theory/#dependent-type-theory">Dependent
-                      Type Theory</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">3.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Propositions-and-Proofs/#propositions-and-proofs">Propositions
-                      and Proofs</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">4.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Quantifiers-and-Equality/#quantifiers-and-equality">Quantifiers
-                      and Equality</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">5.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Tactics/#Theorem-Proving-in-Lean-4--Tactics">Tactics</a>
-                  </td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">6.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Interacting-with-Lean/#Theorem-Proving-in-Lean-4--Interacting-with-Lean">Interacting
-                      with Lean</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">7.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Inductive-Types/#inductive-types">Inductive
-                      Types</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">8.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Induction-and-Recursion/#induction-and-recursion">Induction
-                      and Recursion</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">9.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Structures-and-Records/#structures-and-records">Structures
-                      and Records</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">10.</td>
-                  <td><a href="https://leanprover.github.io/theorem_proving_in_lean4/Type-Classes/#type-classes">Type
-                      Classes</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">11.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/The-Conversion-Tactic-Mode/#conv">The
-                      Conversion Tactic Mode</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">12.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Axioms-and-Computation/#axioms-and-computation">Axioms
-                      and Computation</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="title"><label for="--verso-manual-toc-----bookRoot" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-----bookRoot" checked="checked"></label><span class="">Table of Contents</span></div>
+            <table> <tbody>
+                <tr class="current numbered"><td class="num">1.</td><td>H2</td></tr>
+                <tr class="numbered"><td class="num">2.</td><td>H2</td></tr>
+                <tr class="numbered"><td class="num">3.</td><td>H2</td></tr>
+            </tbody> </table>
           </div>
           <div class="split-toc">
-            <div class="title">
-              <label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox"
-                  class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span
-                class="number">1.</span>&nbsp;<span class="current"><a
-                  href="https://leanprover.github.io/theorem_proving_in_lean4/Introduction/#Intro">Introduction</a></span>
-            </div>
-            <table>
-              <tbody>
-                <tr class="numbered">
-                  <td class="num">1.1.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Introduction/#Theorem-Proving-in-Lean-4--Introduction--Computers-and-Theorem-Proving">Computers
-                      and Theorem Proving</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">1.2.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Introduction/#Theorem-Proving-in-Lean-4--Introduction--About-Lean">About
-                      Lean</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">1.3.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Introduction/#Theorem-Proving-in-Lean-4--Introduction--About-this-Book">About
-                      this Book</a></td>
-                </tr>
-                <tr class="numbered">
-                  <td class="num">1.4.</td>
-                  <td><a
-                      href="https://leanprover.github.io/theorem_proving_in_lean4/Introduction/#Theorem-Proving-in-Lean-4--Introduction--Acknowledgments">Acknowledgments</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="title"><label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span class="number">1.</span>&nbsp;<span class="current">H2</span></div>
+            <table><tbody>
+                <tr class="numbered"><td class="num">1.1.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">1.2.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">1.3.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">1.4.</td><td>H3</td></tr>
+            </tbody></table>
+          </div>
+          <div class="split-toc">
+            <div class="title"><label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span class="number">2.</span>&nbsp;<span>H2</span></div>
+            <table><tbody>
+                <tr class="numbered"><td class="num">2.1.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">2.2.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">2.3.</td><td>H3</td></tr>
+            </tbody></table>
+          </div>
+          <div class="split-toc">
+            <div class="title"><label for="--verso-manual-toc-Intro" class="toggle-split-toc"><input type="checkbox" class="toggle-split-toc" id="--verso-manual-toc-Intro" checked="checked"></label><span class="number">3.</span>&nbsp;<span>H2</span></div>
+            <table><tbody>
+                <tr class="numbered"><td class="num">3.1.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">3.2.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">3.3.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">3.4.</td><td>H3</td></tr>
+                <tr class="numbered"><td class="num">3.5.</td><td>H3</td></tr>
+            </tbody></table>
           </div>
         </div>
       </div>
-      <div class="last">
-        <ul id="meta-links">
-          <li> <a href="https://www.adjmatrix.site/">Home</a> </li>
-          <li> <a href="https://www.adjmatrix.site/pages">Content</a> </li>
-        </ul>
-      </div>
-    </nav> -->
+      <div class="last"><ul id="meta-links">
+        <li><a href="https://www.adjmatrix.site/">Home</a></li>
+        <li><a href="https://www.adjmatrix.site/pages">Content</a></li>
+      </ul></div>
+    </nav>
     <main>
       <div class="content-wrapper">
         {{ content }}
       </div>
     </main>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script
 </body>
 
 </html>
