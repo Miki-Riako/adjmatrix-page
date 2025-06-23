@@ -1,0 +1,29 @@
+# _config.yml
+title: Ajdmatrix
+author: Kagami
+description: >-
+  Ajdmatrix website
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: [1, 2, 3]
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  math_engine: katex
+
+collections:
+  chapters:
+    output: true
+    permalink: /chapters/:name/
+
+plugins:
+  - jekyll-feed
+  - jekyll-toc
+
+toc:
+  min_level: 2
+  max_level: 3
+  list_class: "page-toc-list"
+  sublist_class: "page-toc-sublist"
