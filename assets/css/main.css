@@ -30,11 +30,30 @@ main {
     align-items: center;
 }
 
+.row.vertical {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.row.vertical p {
+    margin: 5px 0;
+}
+
 #frame h1 {
     font-size: 80px;
     font-weight: 700;
     margin-top: auto;
     margin-bottom: auto;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+#frame h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    white-space: nowrap;
     margin-left: 20px;
 }
 
