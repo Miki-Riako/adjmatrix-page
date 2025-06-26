@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adj-Matrix - 404</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="icon" href="/assets/img/adjmatrix_black.png" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+  <link rel="icon" href="/assets/img/adjmatrix.png" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+  <main>
+    <div id="frame">
+      <div class="row">
+		<img id="error-image" src="/assets/img/adjmatrix.png" alt="404 Logo">
+        <h2>404 Not Found</h2>
+      </div>
+      <div class="row vertical">
+        <p>Home - <a href="https://www.adjmatrix.site">homepage</a></p>
+        <p>Contact - <a href="mailto:adjmatrix@outlook.com">adjmatrix@outlook.com</a></p>
+      </div>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const imageNames = ['apologetic', 'sad', 'scared', 'confused', 'embarrassed'];
+      const selectedImageName = imageNames[Math.floor(Math.random() * imageNames.length)];
+      const imgElement = document.getElementById('error-image');
+      if (imgElement) {
+        imgElement.src = `/assets/img/${selectedImageName}.png`;
+        imgElement.alt = `An illustration depicting a feeling of ${selectedImageName} for the 404 error.`;
+      }
+    });
+  </script>
+</body>
+</html>
