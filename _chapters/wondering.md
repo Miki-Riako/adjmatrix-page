@@ -246,8 +246,6 @@ Waiting for update...
 
 ### Principles of digital communication
 
-Not Principles of communication.
-
 Not yet learned...
 
 Waiting for update...
@@ -280,6 +278,8 @@ C语言以其**面向过程**的编程范式和与**底层硬件的高度结合*
 
 End - **C-Language**
 
+占位符，以后会在这里做一个思维结构图，等待更新🤗
+
 ### Java
 
 Waiting for update...
@@ -305,9 +305,3 @@ Waiting for update...
 Not yet learned...
 
 Waiting for update...
-
-<!-- ### Advanced analysis (Real analysis, Complex analysis, Fourier analysis, Functional analysis)
-
-Not yet learned...
-
-Waiting for update... -->
