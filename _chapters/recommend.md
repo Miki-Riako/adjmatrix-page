@@ -21,6 +21,8 @@ permalink: /pages/recommend
 
 我个人的一种学习方法：先深度优先，再广度优先。即对某一门课程，先深入选择一两门教材或课程学习，学习完后，第二轮学习时则选择其他的所以的剩余教材逐章节并行对比学习，先DFS再BFS，两轮学习（如果是本就适合多轮学习例如线性代数这样的学科则还可在第二轮引入新知识要点）。首先明智地选择DFS的核心教材，高效地执行DFS过程，并在BFS阶段有针对性地进行对比和补充，同时始终以自己的目标与书与课程的习题为检验标准。在执行过程中，可能需要根据实际情况进行微调。例如，如果发现DFS选择的教材确实有重大缺陷，可能需要提前中止，重新选择核心教材，或者直接在BFS阶段重点弥补。
 
+此外还值得注意的是，选择书与课程固然重要，但更重要的是有没有完全学完并理解了里面的内容。
+
 一些网站推荐：
 
 书籍
@@ -44,9 +46,6 @@ Courses
 - MIT18.06 Linear Algebra - Gilbert Strang
     - 最适合线性代数入门的课程，有教材
 
-<!-- - 线代启示录
-    - 实际上是blog而非课程，但是内容依旧非常不错 -->
-
 Books
 - 线性代数高级教程 A Second Course in Linear Algebra - horn等
     - 很适合线性代数再次学习时入门矩阵论的教材
@@ -57,12 +56,15 @@ Books
 - 高等代数 - 丘维声
     - 适合练习题，证明题质量较高，练度扎实
 - 线性代数 同济版
-    - 不适合入门，适合练习题，题目量大管饱，社区讨论也最多
+    - 不适合入门，适合练习，题目量大管饱，社区讨论也最多
 - 线性代数及其应用 Linear Algebra and Its Applications - David C. Lay
     - 适合入门后再次学习，部分内容能够对线性代数上升理解
-
 - Linear Algebra Done Right - Axler
-    - 适合入门后再次学习，个人建议英文原版而非中译本
+    - 适合入门后再次学习，个人建议两本都阅读过感觉建议读英文原版而非中译本（也不是说中译不好，读完就是感觉怪，我个人还搭配了一个头像是久美子的up主视频看）
+- 数值线性代数
+    - 数值计算作为补充内容
+- 矩阵计算手册 The Matrix Cookbook
+    - 类似积分表一样的工具性教材
 
 ### Mathematical Analysis
 
@@ -94,6 +96,8 @@ Courses
     - 宋浩数理统计部分很通俗易懂可倍速快速学习
 - 概率导论 Introduction to Probability - John Tsitsiklis
     - 书籍的配套课
+- MIT 6.041 概率系统分析与应用概率
+    - 同MIT课程，有配套讲义习题等
 
 Books
 - 概率导论 Introduction to Probability - John Tsitsiklis
@@ -101,7 +105,15 @@ Books
 - 概率论与数理统计 - 茆诗松
     - 经典的国内教材
 - 概率论基础教程 A First Course in Probability - Ross
-    - 知识内容丰富的教材
+    - 知识内容丰富且可用于入门的教材
+- 高等数理统计 - 陈希孺
+    - 内容更深入
+- 统计计算：使用R
+    - 更加深入的统计部分，会R语言还可实践
+- 具体数学：计算机科学基础
+    - 放这里不太准确，内容其实远超概率统计，按需学习
+- Statistical Inference 统计推断
+    - 概率统计经典教材
 
 ### Calculus
 
@@ -111,9 +123,6 @@ Courses
 - MIT18.02 Multivariable Calculus
     - 适合微积分入门的课程
 
-<!-- - b23.tv/w8XMMCS
-    - 快速掌握矩阵的求导方法 -->
-
 Books
 - 高等数学 同济版
     - 内容较基础，很经典的教材，适合入门，社区讨论也最多
@@ -121,6 +130,18 @@ Books
     - 内容较基础，适合入门，全英文
 - 普林斯顿微积分读本 - The Calculus Lifesaver: All the Tools You Need to Excel at Calculus
     - 适合入门
+- 高等数学习题及习题集精解 - 复旦版
+    - 一本类似同济版但更加深入的教材，习题及解析很不错适合用来练习
+- 常微分方程 - 丁同仁
+    - 大部分微积分与高数教材讲解微分方程部分都很浅，这是一本适合入门的常微分方程教材
+- 常微分方程 - 王高雄
+    - 类似上一本教材，更加偏重做题，适合练习习题
+- Advanced Engineering Mathematics
+    - 除了下面会提到的数值分析部分，PartA部分里面也讲到了微分方程部分适合学习
+- 微积分学教程
+    - 经典的苏系微积分入门教材
+- Thomas' Calculus 托马斯微积分
+    - 经典的美系微积分入门教材
 
 ## CS
 
@@ -140,13 +161,14 @@ Courses
 
 Books
 - Advanced Engineering Mathematics
-    - PartE部分是扎实丰富的数值分析内容
+    - PartE部分是扎实丰富的数值分析内容，很值得作为数值分析快速学习的教材（其他部分也不错，后面就不再重复列出该书了）
 
 ### Discrete mathematics
 
 Courses
 - 离散数学 电子科大版
-    - 国内网课
+- 离散数学 北大版
+    - 国内网课，北大版内容更丰富，选看
 
 Books
 - Invitation to Discrete Mathematics
@@ -154,15 +176,19 @@ Books
 - Discrete Mathematics and Its Applications
     - 和MIT线代同根同源，极其著名，有中译
 - 离散数学 - 屈婉玲
-    - 经典国内教材，第4部分组合数学内容很好
+- 离散数学教程 - 屈婉玲
+    - 经典国内教材，第4部分组合数学内容很好，教程中可以刷习题质量好
 
 ### Algorithm analysis
 
 Courses
 - 算法设计与分析 武大版
-    - 有教材
 - 算法设计与分析 北航版
-    - 有教材
+    - 国内网课，均有配套教材
+- MIT 6.006 Introduction to Algorithms
+    - 以CLRS为教材，相比直接啃书，该课程更加适合入门了，图形展示通俗易懂
+- Coursera: Algorithms I & II
+    - 普林斯顿课程，Project极其丰富
 
 Books
 - 算法导论 Introduction to Algorithms - CLRS
@@ -174,7 +200,10 @@ Books
 
 Courses
 - 形式语言与自动机 哈工大版
-    - 比较经典，有MOOC
+- 形式语言与自动机 北大版
+    - 均为国内网课，哈工大版是经典
+- CS4810 Introduction to Theory of Computation
+    - 不错的计算理论网课，配套习题很好
 
 Books
 - 自动机理论、语言和计算导论 Introduction to Automata Theory Languages and Computations
@@ -203,6 +232,8 @@ Books
 Courses
 - CS4100 Computer Architecture，TingTing Hwang
     - 内容很全面的网课
+- 计算机组成 北大
+    - 是计组课程，内容较少，入门级别
 
 Books
 - 计算机组成与设计 Computer Organization and design MIPS版
@@ -215,6 +246,12 @@ Books
 Books
 - 操作系统概念 Operating System Concepts
     - 著名黑书
+- Operating System Concepts
+    - 上者的精简版
+- 操作系统 精髓与设计原理
+    - 另一本黑书，可以对比看看哪个更加适合
+- 操作系统导论 Operating System ：Three Easy Pieces
+    - 即OSTEP，深入浅出，但中译又是有问题
 
 ### Digital circuit
 
@@ -227,52 +264,76 @@ Courses
     - 很知名的数字电路课程，Project内容很丰富
 - Digital system design 台湾科技大学 刘一宇
     - 以Fundamentals of Logic Design为教材的课程，适合结合一起学习
-<!-- - Neso Academy
-    - Youtube 知名的数电 channel -->
+- 数位逻辑设计 台湾清华大学
+    - 讲的不错的网课
 
 Books
 - 数字设计和计算机体系结构 Digital Design and Computer Architecture - Harris, David, Harris, Sarah
-    - 很著名的数字电路教材，丰富扎实
+    - 很著名的数字电路教材，丰富扎实，英文更佳
 - 論理回路入門 - 坂井修一
     - 日系教材，内容很通俗易懂
 - 现代逻辑设计
     - 值得学习，为清华的数字电路课程教材
 - Fundamentals of Logic Design
     - 全英，国外的经典数字电路教材
+- Digital Design: Principles and Practices 数字设计原理与实践
+    - 即数电的黑书
 
 ### Machine learning
 
 Courses
 - 统计学习方法 - 李航
     - 有教材，很适合结合教材看或单看教材都不错
-- 机器学习白板推导
-    - 很知名的机器学习网课
 - ESL
     - 习题非常难，有时间和精力可以看
 - CMU-ML
     - 课后题可以做做
+- Coursera: Machine Learning
+    - 大名鼎鼎的吴恩达课程
+- CS229 Machine Learning
+    - 也是吴恩达课程，更加偏理论，很吃数学功底
 
 Books
 - The Elements of Statistical Learning
     - ESL教材
 - 機械学習 中川裕志
-    - 曾作为东京大学学部使用的教材
+    - 曾为东京大学学部使用教材
+- Introduction to Statistical Machine Learning 统计机器学习导论 杉山将
+    - 同上
 - 机器学习 周志华
     - 西瓜书
+- 动手实现深度学习 李沐
+    - 算比较著名的ML，DL教材了
+- 神经网络与深度学习
+    - 即NNDL
+- Artificial Intelligence: A Modern Approach 人工智能：一种现代的方法
+    - 也是一本人工智能经典教材
+- 模式识别与机器学习
+    - 即PRML
 
 ### Data structures
 
-Waiting for update...
+Books
+- 数据结构与算法分析 Data Structures and Algorithm Analysis in C
+    - 即黑书
 
 ### Optimization theory
 
-Not yet learned...
-
-Waiting for update...
+Books
+- Convex Optimization 凸优化 - Boyd
+    - 凸优化经典教材了，学ML必备的
 
 ### Computer networking
 
-Waiting for update...
+Courses
+- Computer Networking: A Top-Down Approach - Kurose
+    - 配套网课，结合书籍看很好，内容丰富
+- 计算机网络 湖科大
+    - 听说是最容易入门的课程
+
+Books
+- 计算机网络: 自顶向下方法 Computer Networking: A Top-Down Approach
+    - 经典的计算机网络教材
 
 ### Graph theory
 
@@ -289,10 +350,11 @@ Books
 ### Information theory
 
 Courses
-- 信息论课程 上交
-    - 国内的信息网课
 - 信息论 台湾交通大学 陈伯宁
     - 在世界都极其知名的网课，课程内容丰富
+- 信息论课程 上交
+- 应用信息论基础 清华
+    - 国内的信息论网课
 
 Books
 - 情报理论 - 今井秀树
@@ -310,9 +372,8 @@ Courses
 
 Books
 - 信号与系统 - 奥本海姆
-    - 该领域最知名与重要的教材，中英皆不错
 - 离散时间信号处理 - 奥本海姆
-    - 上书的进阶版，内容很复杂，可挑选看，例如挑选3和8
+    - 该领域最知名与重要的教材，中英皆不错，后者为进阶版，内容很复杂，可挑选看，例如挑选3和8
 - 数字信号处理 - 高西全, 丁玉美
     - 国内教材，基于Matlab
 
@@ -321,12 +382,18 @@ Books
 Books
 - 电路 - 邱关源
     - 这些课看得少，只看过这本
+- Fundamentals of Electric Circuits
+    - 海外很著名的教材
 
 ### Electronic circuits
 
 Courses
 - 拉扎维网课
     - 听说挺好
+
+Books
+- Fundamentals of Microelectronics - 拉扎维
+    - 拉扎维教材
 
 ### Principles of digital communication
 
@@ -350,17 +417,13 @@ Waiting for update...
 
 ### Software programming
 
-Waiting for update...
+Books
+- 计算机科学导论
+    - 黑书，适合萌新入门或放松，不知道放哪里就放这里了
 
 ### Dynamic programming
 
 Waiting for update...
-
-<!-- Courses
-- 左程云 动态规划
-    - b站资源
-- 代码随想录DP
-    - b站资源，也有网课和blog -->
 
 ---
 
@@ -375,9 +438,3 @@ Waiting for update...
 Not yet learned...
 
 Waiting for update...
-
-<!-- ### Advanced analysis (Real analysis, Complex analysis, Fourier analysis, Functional analysis)
-
-Not yet learned...
-
-Waiting for update... -->
