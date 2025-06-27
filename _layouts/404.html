@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" href="/assets/img/adjmatrix_black.png" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
   <link rel="icon" href="/assets/img/adjmatrix.png" media="(prefers-color-scheme: dark)">
+  <style>
+    .hidden-image {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <main>
     <div id="frame">
       <div class="row">
-		<img id="error-image" src="/assets/img/adjmatrix.png" alt="404 Logo">
+		<img id="error-image" src="/assets/img/adjmatrix.png" alt="404 Logo" style="display: none;">
         <h2>404 Not Found</h2>
       </div>
       <div class="row vertical">
@@ -29,6 +34,18 @@
       if (imgElement) {
         imgElement.src = `/assets/img/${selectedImageName}.png`;
         imgElement.alt = `An illustration depicting a feeling of ${selectedImageName} for the 404 error.`;
+        imgElement.onload = function() {
+          imgElement.style.display = 'block';
+        };
+        imgElement.onerror = function() {
+          console.error(`Failed to load image: ${imgElement.src}`);
+          imgElement.src = '/assets/img/adjmatrix.png';
+          imgElement.alt = '404 Logo (Fallback)';
+          imgElement.style.display = 'block';
+        };
+        if (imgElement.complete) {
+          imgElement.style.display = 'block';
+        }
       }
     });
   </script>
