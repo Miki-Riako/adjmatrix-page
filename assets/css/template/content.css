@@ -4,7 +4,7 @@
  */
 
 .content-wrapper {
-  font-family: 'Lora', 'Times New Roman', serif;
+  /* font-family: 'Lora', 'Times New Roman', serif; */
   font-size: 20px;
   color: #333333;
 }
@@ -62,7 +62,7 @@
 .content-wrapper blockquote {
   color: #777777;
   /* font-style: italic; */
-  font-size: 22px;
+  /* font-size: 22px; */
   width: 90%;
   margin: 30px auto;
   padding: 0 20px;
@@ -133,4 +133,42 @@ strong, b {
 .content-wrapper blockquote.warning > p:first-of-type strong,
 .content-wrapper blockquote.warning > p:first-of-type {
     color: #d29922;
-} 
+}
+
+/* 匹配所有 src 属性中的图片 */
+img[src*="#w90"] {
+  width: 90%;
+  height: auto;
+}
+img[src*="#w80"] {
+  width: 80%;
+  height: auto;
+}
+img[src*="#w70"] {
+  width: 70%;
+  height: auto;
+}
+img[src*="#w60"] {
+  width: 60%;
+  height: auto;
+}
+img[src*="#w50"] {
+  width: 50%;
+  height: auto;
+}
+img[src*="#w40"] {
+  width: 40%;
+  height: auto;
+}
+img[src*="#w30"] {
+  width: 30%;
+  height: auto;
+}
+img[src*="#w20"] {
+  width: 20%;
+  height: auto;
+}
+img[src*="#w10"] {
+  width: 10%;
+  height: auto;
+}
