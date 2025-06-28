@@ -9,15 +9,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         copyButton.textContent = 'Copy';
 
         // Get the container of the code block to append the button
-        const container = codeBlock.closest('div');
-        if (container) {
-            container.style.position = 'relative';
-            container.appendChild(copyButton);
-        } else {
-            // Fallback if no div container
-            codeBlock.style.position = 'relative';
-            codeBlock.appendChild(copyButton);
-        }
+        codeBlock.style.position = 'relative';
+        codeBlock.appendChild(copyButton);
 
         // Add click event listener
         copyButton.addEventListener('click', () => {

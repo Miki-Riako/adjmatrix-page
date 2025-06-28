@@ -453,8 +453,7 @@ samp {
     transition: opacity 0.3s;
 }
 
-.highlighter-rouge:hover .copy-code-button,
-div:has(> .highlighter-rouge):hover .copy-code-button {
+.highlighter-rouge:hover .copy-code-button {
     opacity: 1;
 }
 
