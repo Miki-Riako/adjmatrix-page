@@ -36,7 +36,7 @@ permalink: /pages/wondering
 *   **Programming**：掌握与机器对话的语言，从底层语系到高级编程范式，实现创造。
 *   **Advanced Mathematics**：为更深层次的研究和创新，攀登数学的更高峰。
 
-![Science](/assets/img/science.png)
+![Science](/assets/img/science.png#w80)
 
 Enjoy!
 
